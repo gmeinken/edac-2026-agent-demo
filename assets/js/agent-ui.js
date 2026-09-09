@@ -317,7 +317,9 @@
 
   function updateDebug(reply) {
     if (!els.debug) return;
+    const project = (window.EDAC_CONFIG || {}).amplitudeProjectId;
     els.debug.innerHTML = `
+      ${project ? `<span><b>project</b> ${esc(project)}</span>` : ''}
       <span><b>session</b> ${esc((T.sessionId || '').slice(0, 13))}…</span>
       <span><b>turn</b> ${T.turnId}</span>
       <span><b>intent</b> ${esc(reply.intent || 'remote')}</span>
@@ -429,7 +431,9 @@
       }
     });
 
-    els.debug.innerHTML = '<span>Agent Analytics events stream to Amplitude on every turn.</span>';
+    const project = (window.EDAC_CONFIG || {}).amplitudeProjectId;
+    els.debug.innerHTML = '<span>Agent Analytics events stream to Amplitude'
+      + (project ? ' <b>project</b> ' + esc(project) : '') + ' on every turn.</span>';
 
     // Any "Ask the Concierge" trigger elsewhere on the page.
     document.addEventListener('click', e => {

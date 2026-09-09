@@ -13,7 +13,11 @@
 <script src="https://cdn.amplitude.com/script/8ca81a4f91a216d9c3b5d9cdd5d5fb79.js"></script>
 <script>
   window.EDAC_CONFIG = {
+    // Amplitude project 861583. The SDK only needs the API key; the
+    // project ID is recorded so the page, the README, and whoever is
+    // checking Live Events are all pointed at the same project.
     amplitudeApiKey: '8ca81a4f91a216d9c3b5d9cdd5d5fb79',
+    amplitudeProjectId: '861583',
     serverZone: 'US',
 
     // Agent Analytics
