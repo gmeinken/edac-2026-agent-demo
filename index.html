@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EDAC 2026 — Attendee Planning Hub | Everbright Bay Resort</title>
+<meta name="description" content="Attendee planning hub for the Everbright Data & Analytics Conference 2026. Book your resort hotel, price park tickets, build your session agenda, and plan your downtime.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b1b3a'/><path d='M16 6l2.8 5.9 6.2.8-4.6 4.3 1.2 6.2L16 20.3l-5.6 2.9 1.2-6.2L7 12.7l6.2-.8z' fill='%23f5c451'/></svg>">
+
+<!-- Amplitude Unified Script: Analytics + Session Replay from one tag. -->
+<script src="https://cdn.amplitude.com/script/8ca81a4f91a216d9c3b5d9cdd5d5fb79.js"></script>
+<script>
+  window.EDAC_CONFIG = {
+    amplitudeApiKey: '8ca81a4f91a216d9c3b5d9cdd5d5fb79',
+    serverZone: 'US',
+
+    // Agent Analytics
+    agentId: 'edac-concierge',
+    env: 'demo',
+    idleTimeoutMinutes: 30,
+
+    // Reported on [Agent] AI Response. Rates are per 1M tokens and are
+    // what [Agent] Cost USD is computed from — Amplitude does not derive
+    // cost from model + token counts.
+    model: {
+      name: 'claude-sonnet-5',
+      provider: 'anthropic',
+      inputPerMillion: 3.0,
+      outputPerMillion: 15.0
+    },
+
+    // Leave null to run the built-in retrieval agent entirely in the
+    // browser. Point it at your own model-backed endpoint (which holds
+    // the provider key server-side) and every turn is proxied there
+    // instead; the Agent Analytics event stream is unchanged.
+    agentEndpoint: null,
+
+    // Logs every tracked event to the console.
+    debug: true,
+    eventCode: 'EDAC 2026'
+  };
+</script>
+</head>
+<body>
+
+<a class="skip" href="#plan">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l3.4 7.2 7.6 1-5.6 5.3 1.5 7.6L16 20.5 9.1 24.1l1.5-7.6L5 11.2l7.6-1z" fill="currentColor"/></svg>
+      <span class="brand-text"><b>Everbright</b> Resort</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#plan">Home</a>
+      <a href="#hotels">Accommodations</a>
+      <a href="#tickets">Tickets &amp; Passes</a>
+      <a href="#agenda">Your Agenda</a>
+      <a href="#experiences">Parks</a>
+      <a href="#logistics">Know Before You Go</a>
+    </nav>
+    <button class="btn btn-gold btn-sm" data-jump="tickets">Buy Tickets</button>
+  </div>
+</header>
+
+<div class="promo">
+  <div class="wrap promo-in">
+    <p>Don't miss your advance-purchase savings on Everbright Theme Park tickets — available for another <strong id="promo-days">—</strong> days.</p>
+    <div class="promo-count"><span id="promo-num">—</span><small>DAYS</small></div>
+    <button class="btn btn-white btn-sm" data-jump="tickets">Get yours today</button>
+  </div>
+</div>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="home">
+  <div class="hero-strip" aria-hidden="true">
+    <svg viewBox="0 0 240 200" preserveAspectRatio="xMidYMid slice" class="scene scene-1">
+      <defs><linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2a5e"/><stop offset="1" stop-color="#4c2f6b"/></linearGradient></defs>
+      <rect width="240" height="200" fill="url(#sky1)"/>
+      <circle cx="196" cy="40" r="16" fill="#f7d98a" opacity=".85"/>
+      <g fill="#0c1330"><path d="M0 150l40-26 34 20 38-30 44 26 40-22 44 26v56H0z"/></g>
+      <g fill="#f5c451" opacity=".9"><circle cx="60" cy="120" r="1.6"/><circle cx="104" cy="104" r="1.4"/><circle cx="150" cy="114" r="1.5"/><circle cx="188" cy="100" r="1.3"/></g>
+    </svg>
+    <svg viewBox="0 0 240 200" preserveAspectRatio="xMidYMid slice" class="scene scene-2">
+      <defs><linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d2246"/><stop offset="1" stop-color="#1c4c7a"/></linearGradient></defs>
+      <rect width="240" height="200" fill="url(#sky2)"/>
+      <g fill="#0a1730"><path d="M120 40l26 44h-52z"/><rect x="104" y="84" width="32" height="76"/><path d="M88 96l16 22H72z"/><rect x="72" y="118" width="32" height="42"/><path d="M152 96l16 22h-32z"/><rect x="136" y="118" width="32" height="42"/></g>
+      <g fill="#f5c451"><rect x="116" y="100" width="8" height="12" rx="2"/><rect x="84" y="130" width="6" height="10" rx="2"/><rect x="150" y="130" width="6" height="10" rx="2"/></g>
+      <rect y="160" width="240" height="40" fill="#071022"/>
+    </svg>
+    <svg viewBox="0 0 240 200" preserveAspectRatio="xMidYMid slice" class="scene scene-3">
+      <defs><linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a1d4f"/><stop offset="1" stop-color="#8a3b52"/></linearGradient></defs>
+      <rect width="240" height="200" fill="url(#sky3)"/>
+      <g fill="#120a24"><rect x="30" y="70" width="26" height="90"/><rect x="66" y="52" width="34" height="108"/><rect x="110" y="84" width="24" height="76"/><rect x="144" y="60" width="30" height="100"/><rect x="182" y="90" width="28" height="70"/></g>
+      <g fill="#ffd98a" opacity=".9"><rect x="36" y="82" width="5" height="7"/><rect x="46" y="98" width="5" height="7"/><rect x="74" y="66" width="5" height="7"/><rect x="86" y="84" width="5" height="7"/><rect x="118" y="96" width="5" height="7"/><rect x="152" y="74" width="5" height="7"/><rect x="190" y="104" width="5" height="7"/></g>
+      <rect y="160" width="240" height="40" fill="#0b0618"/>
+    </svg>
+    <svg viewBox="0 0 240 200" preserveAspectRatio="xMidYMid slice" class="scene scene-4">
+      <defs><linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f3a2f"/><stop offset="1" stop-color="#1f6b4a"/></linearGradient></defs>
+      <rect width="240" height="200" fill="url(#sky4)"/>
+      <g fill="#08251c"><ellipse cx="52" cy="120" rx="34" ry="22"/><ellipse cx="118" cy="106" rx="42" ry="26"/><ellipse cx="188" cy="124" rx="36" ry="22"/><rect x="48" y="118" width="7" height="44"/><rect x="114" y="104" width="8" height="58"/><rect x="184" y="122" width="7" height="40"/></g>
+      <rect y="158" width="240" height="42" fill="#052018"/>
+      <g fill="#f5c451" opacity=".8"><circle cx="80" cy="146" r="2"/><circle cx="140" cy="150" r="2"/><circle cx="204" cy="144" r="2"/></g>
+    </svg>
+  </div>
+
+  <div class="wrap hero-body">
+    <p class="hero-kicker">Everbright Bay Resort · Lumina Springs, Florida</p>
+    <h1 class="hero-title">EDAC 2026 <span>— External</span></h1>
+    <p class="hero-dates">09/11/2026 &nbsp;–&nbsp; 09/17/2026</p>
+    <div class="hero-cta">
+      <button class="btn btn-gold" data-jump="tickets">Buy Tickets</button>
+      <button class="btn btn-ghost" data-jump="hotels">Book Your Hotel</button>
+      <button class="btn btn-ghost" data-jump="agenda">View Your Agenda</button>
+    </div>
+    <p class="hero-agent">
+      New this year — ask the concierge.
+      <button class="linkish" data-concierge="hero" data-prompt="What should I plan first?">Start a conversation</button>
+    </p>
+  </div>
+</section>
+
+<!-- ============================ PLAN ============================ -->
+<section class="band band-light" id="plan">
+  <div class="wrap">
+    <p class="eyebrow">Welcome</p>
+    <h2 class="h2">To Your Planning Hub</h2>
+    <p class="lede">
+      We're glad you're joining us at Everbright Bay Resort. After a productive day of sessions, unwind and
+      connect with colleagues somewhere worth staying — where the work and the downtime both land.
+    </p>
+
+    <div class="steps">
+      <article class="step">
+        <span class="step-n">1</span>
+        <h3>Book your hotel</h3>
+        <p>Four resort hotels at the attendee rate, from a covered walkway to the session rooms to the best value on property.</p>
+        <button class="linkish" data-jump="hotels">Reserve a room →</button>
+      </article>
+      <article class="step">
+        <span class="step-n">2</span>
+        <h3>Purchase theme park tickets</h3>
+        <p>Add park time so you can unwind after sessions, or extend the trip either side of the event.</p>
+        <button class="linkish" data-jump="tickets">See ticket offers →</button>
+      </article>
+      <article class="step">
+        <span class="step-n">3</span>
+        <h3>Build your agenda</h3>
+        <p>Sixteen sessions across five tracks over three conference days. Filter by track, day, or level.</p>
+        <button class="linkish" data-jump="agenda">Browse sessions →</button>
+      </article>
+      <article class="step">
+        <span class="step-n">4</span>
+        <h3>Plan your downtime</h3>
+        <p>Dining, parks, and can't-miss experiences. The popular tables fill about three weeks out.</p>
+        <button class="linkish" data-jump="experiences">Explore the parks →</button>
+      </article>
+      <article class="step step-agent">
+        <span class="step-n">5</span>
+        <h3>Or just ask</h3>
+        <p>The EDAC Concierge can do all four of the above in one conversation — and check your plan for conflicts.</p>
+        <button class="linkish" data-concierge="plan-card" data-prompt="I am a data engineer attending all three days. Build me an agenda and pick a hotel.">Ask the concierge →</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ AGENDA ============================ -->
+<section class="band" id="agenda">
+  <div class="wrap">
+    <p class="eyebrow">Sessions</p>
+    <h2 class="h2">Your Agenda</h2>
+    <p class="lede">Three conference days, five tracks, six hands-on labs. Add a session to build your personal schedule.</p>
+
+    <div class="agenda-controls">
+      <div class="daytabs" id="daytabs" role="tablist" aria-label="Conference day"></div>
+      <div class="filters">
+        <label class="field">
+          <span>Track</span>
+          <select id="f-track"><option value="">All tracks</option></select>
+        </label>
+        <label class="field">
+          <span>Level</span>
+          <select id="f-level">
+            <option value="">Any level</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+            <option value="All">All audiences</option>
+          </select>
+        </label>
+        <label class="field field-grow">
+          <span>Search</span>
+          <input id="f-q" type="search" placeholder="Keyword, speaker, or room">
+        </label>
+      </div>
+    </div>
+
+    <div id="agenda-list" class="agenda-list"></div>
+    <p class="agenda-empty" id="agenda-empty" hidden>No sessions match those filters.</p>
+  </div>
+</section>
+
+<!-- ============================ HOTELS ============================ -->
+<section class="band band-light" id="hotels">
+  <div class="wrap">
+    <p class="eyebrow">Accommodations</p>
+    <h2 class="h2">Book Your Hotel</h2>
+    <p class="lede">Attendee rates at all four resort hotels, held through 08/28/2026 or until the block sells out.</p>
+
+    <div class="hotel-bar">
+      <label class="field">
+        <span>Nights</span>
+        <select id="h-nights">
+          <option value="2">2 nights</option>
+          <option value="3" selected>3 nights</option>
+          <option value="4">4 nights</option>
+          <option value="6">6 nights</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Max nightly rate</span>
+        <select id="h-budget">
+          <option value="">No limit</option>
+          <option value="250">Under $250</option>
+          <option value="320">Under $320</option>
+          <option value="400">Under $400</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" id="h-walk"><span>Walking distance to sessions</span></label>
+    </div>
+
+    <div id="hotel-list" class="hotel-grid"></div>
+  </div>
+</section>
+
+<!-- ============================ TICKETS ============================ -->
+<section class="band" id="tickets">
+  <div class="wrap">
+    <p class="eyebrow">Tickets &amp; Passes</p>
+    <h2 class="h2">Special Ticket Offers for Attendees</h2>
+    <p class="lede">As an attendee, you and your guests get access and savings you won't find at the gate.</p>
+
+    <div class="offer-grid">
+      <div class="offer"><h3>Partial-Day Tickets</h3><p>Valid after 2:00 PM — built for post-session evenings.</p></div>
+      <div class="offer"><h3>Advance Purchase Savings</h3><p>Save up to 20% on 1-day and multi-day tickets when you buy before 09/11/2026.</p></div>
+      <div class="offer"><h3>An Extra Experience</h3><p>Multi-day tickets include one or two Everbright Extra experiences.</p></div>
+      <div class="offer"><h3>Extended Window</h3><p>Tickets are valid from 7 days before the event through 7 days after.</p></div>
+    </div>
+
+    <div class="party-bar">
+      <label class="field"><span>Adults</span>
+        <select id="t-adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+      </label>
+      <label class="field"><span>Children (3–9)</span>
+        <select id="t-kids"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+      </label>
+      <label class="check"><input type="checkbox" id="t-advance" checked><span>Advance pricing (through 09/11)</span></label>
+    </div>
+
+    <div class="table-wrap">
+      <table class="price-table">
+        <thead><tr><th>Ticket</th><th>Per adult</th><th>Per child</th><th>Party total</th><th>You save</th><th></th></tr></thead>
+        <tbody id="ticket-rows"></tbody>
+      </table>
+    </div>
+    <p class="fineprint">Savings based on the non-discounted price for the same ticket at resort guest service desks. Fictional pricing for demonstration.</p>
+  </div>
+</section>
+
+<!-- ============================ EXPERIENCES ============================ -->
+<section class="band band-dark" id="experiences">
+  <div class="wrap">
+    <p class="eyebrow">Parks &amp; Downtime</p>
+    <h2 class="h2">Plan Your Downtime</h2>
+    <p class="lede lede-dark">Four theme parks, two water parks, and an open-air district that needs no ticket at all.</p>
+    <div id="park-grid" class="park-grid"></div>
+    <div class="downtime-cta">
+      <p>Not sure how to fit a park into a conference day?</p>
+      <button class="btn btn-gold" data-concierge="experiences" data-prompt="Plan my Tuesday evening after sessions end">Plan an evening with the concierge</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LOGISTICS ============================ -->
+<section class="band band-light" id="logistics">
+  <div class="wrap">
+    <p class="eyebrow">Know Before You Go</p>
+    <h2 class="h2">Logistics</h2>
+    <div id="logi-grid" class="logi-grid"></div>
+  </div>
+</section>
+
+<!-- ============================ ITINERARY ============================ -->
+<section class="band" id="itinerary">
+  <div class="wrap">
+    <p class="eyebrow">Your Trip</p>
+    <h2 class="h2">Itinerary</h2>
+    <div id="itin-panel" class="itin-panel"></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l3.4 7.2 7.6 1-5.6 5.3 1.5 7.6L16 20.5 9.1 24.1l1.5-7.6L5 11.2l7.6-1z" fill="currentColor"/></svg>
+      <span><b>Everbright</b> Resort</span>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#plan">Planning Hub</a><a href="#agenda">Agenda</a><a href="#hotels">Hotels</a>
+      <a href="#tickets">Tickets</a><a href="#logistics">Know Before You Go</a>
+    </nav>
+    <p class="foot-note">
+      <strong>This is a fictional demonstration site.</strong> Everbright Resort, EDAC, the parks, hotels, sessions,
+      speakers, and prices are invented for a product-analytics demo. Nothing here is a real event and nothing is for sale.
+      Attendee-desk contact details are placeholders.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/analytics.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/agent-telemetry.js"></script>
+<script src="assets/js/agent-core.js"></script>
+<script src="assets/js/agent-ui.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
