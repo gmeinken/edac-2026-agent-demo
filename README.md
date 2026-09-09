@@ -170,6 +170,14 @@ The HTTP API returns `200` on receipt, before the Agent Analytics consumer runs,
 `200` alone does not prove the event landed correctly grouped. Check Live Events in
 project `861583` once before demoing.
 
+## Deploying a change
+
+Push to `main` and GitHub Pages rebuilds in about a minute. One gotcha: Pages serves
+assets with `cache-control: max-age=600`, so a browser that already loaded the page
+can keep running the old JS for ten minutes. The asset URLs in `index.html` carry a
+`?v=` token for that reason — **bump it whenever you change a JS or CSS file**, or a
+tweak made just before a demo may not be the one on screen.
+
 ## Files
 
 ```
