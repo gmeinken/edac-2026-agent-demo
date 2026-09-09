@@ -4,6 +4,9 @@ A fictional conference-attendee planning hub with a working chat agent, instrume
 end to end for **Amplitude Agent Analytics**. Built to demo agent quality, cost, and
 agent-assisted conversion side by side with self-serve conversion.
 
+**Live:** https://gmeinken.github.io/edac-2026-agent-demo/
+**Amplitude project:** `861583` (API key `8ca81a4f…fb79`)
+
 Structurally modelled on a corporate event planning hub: hotel booking, ticket
 offers, session agenda, downtime planning, know-before-you-go. **All branding is
 invented** — Everbright Resort, EDAC, the parks, hotels, sessions, speakers, and
@@ -131,9 +134,10 @@ segmented by whether the conversion event's `source` was the agent or the page.
 ## Demo path in Amplitude
 
 1. Send two or three messages, one that triggers a tool. Confirm in **Live Events**
-   that every event shares one Session ID, each exchange shares one Turn ID and Trace
-   ID, tool calls precede their AI Response, and `$llm_message.text` renders in the
-   thread view.
+   for project `861583` that every event shares one Session ID, each exchange shares
+   one Turn ID and Trace ID, tool calls precede their AI Response, and
+   `$llm_message.text` renders in the thread view. In Agent Analytics the agent shows
+   up as **`edac-concierge`**.
 2. Thumbs-down one response — that is the `user-feedback` Score, which overrides the
    detected negative-feedback signal for the session.
 3. Press **End** to close the session explicitly. The Session Record arrives after
@@ -152,7 +156,8 @@ Everything is in the `EDAC_CONFIG` block at the top of `index.html`:
 
 | Key | Purpose |
 | --- | --- |
-| `amplitudeApiKey` | Project API key. Also appears in the CDN script URL — update both. |
+| `amplitudeApiKey` | Project API key (`8ca81a4f…fb79`). Also appears in the CDN script URL — update both. |
+| `amplitudeProjectId` | `861583`. Not used by the SDK; it labels the widget's debug strip and keeps the docs pointed at the right project. |
 | `agentId` | Becomes `[Agent] Agent ID`. Stable and human-readable. |
 | `env` | Becomes `[Agent] Env`. |
 | `idleTimeoutMinutes` | Sent in `[Agent] Context` and on Session End. |
@@ -161,9 +166,9 @@ Everything is in the `EDAC_CONFIG` block at the top of `index.html`:
 | `debug` | Logs every tracked event to the console. Turn off for a clean demo. |
 | `serverZone` | `US` or `EU`. |
 
-Verify the key points at the project you expect before demoing — the HTTP API returns
-`200` on receipt, before the Agent Analytics consumer runs, so a `200` alone does not
-prove the event landed correctly grouped.
+The HTTP API returns `200` on receipt, before the Agent Analytics consumer runs, so a
+`200` alone does not prove the event landed correctly grouped. Check Live Events in
+project `861583` once before demoing.
 
 ## Files
 
